@@ -1,0 +1,30 @@
+@media (max-width: 700px) {
+    .square {
+        background-color: skyblue;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px;
+        width: 400px;
+    }
+}
+@media (min-width: 701px) {
+    .square {
+        background-color: black;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 400px;
+        width: 400px;
+    }
+}
+.square {
+    border-radius: 5%;
+    border: 1px solid pink;
+    height: 100px;
+    width: 100px;
+}
