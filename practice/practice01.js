@@ -40,7 +40,11 @@ numbers.forEach((num, index, arr) => {
 numbers.map((num, index, arr) => {
     console.log(num, index, arr);
 });
-
+/*
+1 0 (3) [1, 2, 3, foo: '안녕']
+2 1 (3) [1, 2, 3, foo: '안녕']
+3 2 (3) [1, 2, 3, foo: '안녕']
+*/
 /* 결과 동일
 배열 0 (3) ['배열', '모음', '변수입니당', foo: '안녕']
 모음 1 (3) ['배열', '모음', '변수입니당', foo: '안녕']
