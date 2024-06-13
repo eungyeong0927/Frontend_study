@@ -10,9 +10,10 @@ module.exports = {
     sub,
 };
 */
+
 /////////////////////////////////////////////////////////////////////
 
-// ESM 방식
+// ESM 방식 / package.json에  "type": "module"  추가
 export default function multiply(a, b) {
     return a * b;
 }

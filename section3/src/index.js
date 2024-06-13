@@ -7,7 +7,7 @@
 
 /////////////////////////////////////////////////////////
 
-// ESM 방식
+// ESM 방식 / package.json에  "type": "module"  추가
 import mul from "./math.js";
 import { add, sub } from "./math.js";
 console.log(add(1, 2));
