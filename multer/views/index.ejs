@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Axios CDN -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <link rel="stylesheet" href="/static/thumbnail.css" />
+    </head>
+    <body>
+        <h1><%=title%></h1>
+        <h2>Single file upload</h2>
+        <!-- multer 이용시, 반드시 enctype="multipart/form-data" 의 폼이어야 함 -->
+        <form action="/fileupload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="userfile" /><br />
+            <input type="text" name="title" />
+            <button type="submit">업로드</button>
+        </form>
+
+        <h2>Multi file upload</h2>
+        <form action="/fileupload/array" method="POST" enctype="multipart/form-data">
+            <input type="file" name="banana" multiple /><br /><!--Multi file 전송시 multiple 속성 필수-->
+            <input type="text" name="title" />
+            <button type="submit">업로드</button>
+        </form>
+
+        <h2>Multi file upload case2</h2>
+        <form action="/fileupload/fields" method="POST" enctype="multipart/form-data">
+            <input type="file" name="apple" /><br />
+            <input type="text" name="title1" /><br />
+            <input type="file" name="mango" /><br />
+            <input type="text" name="title2" />
+            <button type="submit">업로드</button>
+        </form>
+
+        <h2>동적 파일 업로드</h2>
+        <input type="file" name="thumbnail" id="thumbnail" />
+        <button type="button" onclick="uploadThumbnail();">업로드</button>
+        <br />
+
+        <!-- 썸네일 업로드 내용을 바로 업로드 -->
+        <img src="" alt="" /><br />
+        <script src="/static/thumbnail.js"></script>
+    </body>
+</html>
